@@ -1,35 +1,17 @@
-// Liste des services que tu proposes
-const services = [
-    "Consultation diététique",
-    "Plan nutritionnel personnalisé",
-    "Suivi de perte de poids",
-    "Consultation en ligne"
-];
+document.addEventListener('DOMContentLoaded', () => {
+    const bubbles = document.querySelectorAll('.bubble');
+    const infoBox = document.getElementById('info-box');
 
-// Sélectionne la liste dans laquelle on va ajouter les services
-const servicesList = document.getElementById('services-list');
+    bubbles.forEach(bubble => {
+        bubble.addEventListener('mouseover', () => {
+            const info = bubble.getAttribute('data-info');
+            infoBox.innerHTML = info; // Met à jour le contenu de la boîte d'information
+            infoBox.style.display = 'block'; // Affiche la boîte d'information
+        });
 
-// Ajoute chaque service dans la liste de manière dynamique
-services.forEach(service => {
-    const li = document.createElement('li');
-    li.textContent = service;
-    servicesList.appendChild(li);
+        bubble.addEventListener('mouseout', () => {
+            infoBox.style.display = 'none'; // Masque la boîte d'information lorsqu'on ne survole plus
+        });
+    });
 });
 
-// Liste des images pour la galerie
-const images = [
-    "images/photo1.jpg",
-    "images/photo2.jpg",
-    "images/photo3.jpg"
-];
-
-// Sélectionne le conteneur de la galerie
-const galleryContainer = document.getElementById('gallery-container');
-
-// Ajoute les images à la galerie de manière dynamique
-images.forEach(src => {
-    const img = document.createElement('img');
-    img.src = src;
-    img.alt = "Image de la galerie";
-    galleryContainer.appendChild(img);
-});
