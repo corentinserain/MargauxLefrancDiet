@@ -7,26 +7,25 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <!-- En-tête avec navigation -->
     <header>
         <div class="container">
-            <nav>
+            <!-- Espace réservé pour le futur logo -->
+            <div class="logo">
+              <img src="../images/ML - LOGO PRINCIPAL - COULEUR BASE.png" alt="Logo du Cabinet de Nutrition">
+            </div>
+    
+            <!-- Menu centré -->
+            <nav class="menu-center">
                 <ul>
-                    <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="prestations.html">Prestations</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../index.html">Accueil</a></li> <!-- Correct -->
+                    <li><a href="../pages/prestations.html">Prestations</a></li> <!-- Cela fonctionne seulement si tu es déjà sur cette page -->
+                    <li><a href="faq.html">FAQ</a></li> <!-- Ajout de "../" pour aller dans le bon dossier -->
+                    <li><a href="../pages/contact.html">Contact</a></li> <!-- Ajout de "../" pour aller dans le bon dossier -->
                 </ul>
-                <a href="https://www.doctolib.fr/dieteticien/le-bouscat/margaux-lefranc-le-bouscat/" class="cta-btn" target="_blank">Prendre RDV</a>
             </nav>
+    
+            <!-- Bouton Prendre RDV à droite -->
+            <a href="https://doctolib.fr/dieteticien/le-bouscat/margaux-lefranc-le-bouscat" class="cta-btn" target="_blank">Prendre RDV</a>
         </div>
-    </header>
-
-    <section class="content">
-        <div class="container">
-            <h1>FAQ</h1>
-            <p>Voici les questions fréquentes posées par nos patients et les réponses associées.</p>
-            <!-- Ajoute ici les questions et réponses -->
-        </div>
-    </section>
-</body>
-</html>
+      </header>
