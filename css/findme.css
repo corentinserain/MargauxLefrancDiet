@@ -1,0 +1,343 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; /* Assure que le header reste au-dessus des autres éléments */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6 );
+  }
+  
+  /* Header Container */
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: auto; /* Centre le conteneur */
+    background: linear-gradient(90deg, #FFFFFF);
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Espace pour le futur logo (actuellement vide) */
+  .logo img {
+    width: 300px; /* Ajuste cette valeur selon la taille de ton logo */
+    height: auto;
+    margin-left: 40px;
+  }
+  
+  /* Centrer le menu */
+  .menu-center {
+    flex-grow: 1;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .menu-center ul {
+    list-style: none;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 100px;
+  }
+  
+  .menu-center ul li {
+    margin: 0 20px;
+  }
+  
+  .menu-center ul li a {
+    color: rgba(231,87,86,0.4);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: 'Syne';
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Animation de surlignement au survol */
+  .menu-center ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #FDEF77; /* Couleur du surlignement */
+    transition: width 0.3s ease;
+  }
+  
+  .menu-center ul li a:hover::after {
+    width: 100%; /* Le surlignement prend toute la largeur de l'élément lors du survol */
+  }
+  
+  /* Changement de couleur au survol */
+  .menu-center ul li a:hover {
+    color: #FDEF77;
+  }
+  
+  /* Bouton Prendre RDV */
+  .cta-btn {
+    transform: translateY(20px) translateX(-50px);
+    background-color: rgba(231,87,86,0.4);
+    color: white;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    font-family: 'Syne';
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+  }
+  
+  .cta-btn:hover {
+    background-color: #FDEF77;
+  }
+  
+
+/* Section principale */
+.find-me {
+    margin-top: 120px; /* Espace sous le header */
+    padding: 2rem;
+    background-color: rgba(231,87,86,0.4);
+}
+
+.find-me h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: rgba(231,87,86,0.4);
+    font-family: 'Syne';
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15)
+}
+
+.find-me p {
+    font-size: 100px;
+    font-family: 'lemonada';
+
+}
+
+/* Section de chaque cabinet */
+
+body {
+    margin-top: 200px; /* Ajuste la valeur selon la hauteur de ton header */
+}
+
+
+/* Positionnement du bouton Prendre RDV */
+/* Style spécifique pour le bouton "Prendre RDV" dans la section localisation */
+.cta-rdv {
+    margin-top: 200px;
+    position: absolute; /* Pour le positionner en haut à droite de la section */
+    top: 70px; /* Ajuste la distance par rapport au haut de la section */
+    right: 70px; /* Ajuste la distance par rapport au bord droit */
+    background-color: rgba(231,87,86,0.4) ; /* Un fond rouge différent du bouton général */
+    color: white !important;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    font-family: 'Syne';
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 999; /* S'assurer qu'il soit au-dessus des autres éléments */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Change la couleur au survol */
+.cta-rdv:hover {
+    background-color: #FDEF77; /* Un survol jaune plus lumineux */
+}
+
+.cta-email {
+    margin-top: 1100px;
+    position: absolute; /* Pour le positionner en haut à droite de la section */
+    top: 60px; /* Ajuste la distance par rapport au haut de la section */
+    right: 70px; /* Ajuste la distance par rapport au bord droit */
+    background-color: rgba(231,87,86,0.4) ; /* Un fond rouge différent du bouton général */
+    color: white !important;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    font-family: 'Syne';
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 999; /* S'assurer qu'il soit au-dessus des autres éléments */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Change la couleur au survol */
+.cta-email:hover {
+    background-color: #FDEF77; /* Un survol jaune plus lumineux */
+}
+
+.cta-call {
+    margin-top: 2000px;
+    position: absolute; /* Pour le positionner en haut à droite de la section */
+    top: 50px; /* Ajuste la distance par rapport au haut de la section */
+    right: 70px; /* Ajuste la distance par rapport au bord droit */
+    background-color: rgba(231,87,86,0.4) ; /* Un fond rouge différent du bouton général */
+    color: white !important;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    font-family: 'Syne';
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 999; /* S'assurer qu'il soit au-dessus des autres éléments */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Change la couleur au survol */
+.cta-call:hover {
+    background-color: #FDEF77; /* Un survol jaune plus lumineux */
+}
+
+.location-info {
+    margin-top: -200px !important; /* Espacement entre la carte et la section suivante */
+    display: flex;
+    justify-content: space-between; /* Aligne les éléments de chaque côté */
+    gap: 30px; /* Ajoute de l'espace entre les deux sections */
+}
+
+.location {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+.location p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.location .map {
+    margin-bottom: 1.5rem;
+}
+
+.location .photos {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.location .photos img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+/* Liens */
+.location a {
+    color: #e75656;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.location a:hover {
+    color: #fdef77;
+}
+
+/* Informations pratiques */
+.location h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #444;
+    font-family: 'lemonada';
+}
+
+.location ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.location ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-family: 'inter';
+}
+
+.map-container {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.map {
+    flex: 2; /* La carte occupe plus d'espace */
+    position: relative;
+}
+
+.photo-bubbles {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    margin-left: 20px;
+}
+
+.photo-bubbles img {
+    width: 300px; /* Taille des bulles */
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid rgba(231,87,86,0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-bubbles img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Première bulle */
+.photo-bubbles img:first-child {
+    transform: translateY(20px) translateX(-380px); /* Décale la première bulle vers le haut-droite */
+}
+
+/* Deuxième bulle */
+.photo-bubbles img:last-child {
+    transform: translateY(-200px) translateX(-20px); /* Décale la seconde bulle vers le bas-gauche */
+}
+
+.transport {
+    flex: 1; /* Permet à cette section d'occuper une partie égale de l'espace */
+}
+.practical-info {
+    flex: 1; /* Permet à cette section d'occuper une partie égale de l'espace */
+}
