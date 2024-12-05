@@ -1,0 +1,323 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white; /* Assure que le header reste au-dessus des autres éléments */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6 );
+}
+
+/* Header Container */
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  margin: auto; /* Centre le conteneur */
+  background: linear-gradient(90deg, #FFFFFF);
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Espace pour le futur logo (actuellement vide) */
+.logo img {
+  width: 300px; /* Ajuste cette valeur selon la taille de ton logo */
+  height: auto;
+  margin-left: 40px;
+}
+
+/* Centrer le menu */
+.menu-center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.menu-center ul {
+  list-style: none;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 100px;
+}
+
+.menu-center ul li {
+  margin: 0 20px;
+}
+
+.menu-center ul li a {
+  color: rgba(231,87,86,0.4);
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: 'Syne';
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Animation de surlignement au survol */
+.menu-center ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #FDEF77; /* Couleur du surlignement */
+  transition: width 0.3s ease;
+}
+
+.menu-center ul li a:hover::after {
+  width: 100%; /* Le surlignement prend toute la largeur de l'élément lors du survol */
+}
+
+/* Changement de couleur au survol */
+.menu-center ul li a:hover {
+  color: #FDEF77;
+}
+
+/* Bouton Prendre RDV */
+.cta-btn {
+  background-color: rgba(231,87,86,0.4);
+  color: white;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  margin-right: 60px;
+  font-family: 'Syne';
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cta-btn:hover {
+  background-color: #FDEF77;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 200px;
+  background: url('../images/IMG_3614.jpg') center/cover no-repeat;
+  color: white;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  width: 100vw; /* Assure la pleine largeur du viewport */
+  padding: 0; /* Supprime les padding par défaut */
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6 );
+}
+
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-family: 'Syne';
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+}
+
+.hero h2 {
+  font-family: 'Lemonada';
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+.hero h3 {
+  font-family: 'Inter';
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #fff;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+/* Bouton Découvrez nos services */
+.cta-btg {
+  position: relative; /* Nécessaire pour le positionnement du pseudo-élément */
+  background-color: rgba(231,87,86,0.4);
+  color: white; /* Couleur du texte */
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: color 0.3s ease;
+  margin-right: 30px; /* Ajuste si nécessaire */
+  overflow: hidden; /* Pour cacher le pseudo-élément qui dépasse */
+  z-index: 1;
+  font-family: 'Syne';
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cta-btg::before {
+  content: ''; /* Nécessaire pour afficher le pseudo-élément */
+  position: absolute; /* Positionné par rapport au bouton */
+  top: 50%; /* Centré verticalement */
+  left: 50%; /* Centré horizontalement */
+  width: 100%; /* Prend toute la largeur du bouton */
+  height: 100%; /* Prend toute la hauteur du bouton */
+  background-color: white; /* Fond blanc */
+  opacity: 1; /* Opacité du fond blanc */
+  transform: translate(-50%, -50%); /* Centrer le pseudo-élément */
+  border-radius: 25px;
+  z-index: -1; /* Derrière le texte du bouton */
+}
+
+.cta-btg:hover {
+  background-color: #FDEF77;
+}
+
+
+
+/* Section Services */
+.services {
+  position: relative; /* Nécessaire pour le positionnement de l'overlay */
+  background-image: url('../images/MOTIF.png'); /* Remplacez par votre image de motif */
+  background-size: cover; /* Ajuste la taille de l'image de fond */
+  background-position: center; /* Centre l'image de fond */
+  padding: 3rem 200px; /* Espacement en haut et en bas */
+  overflow: hidden; /* Pour éviter tout débordement des éléments */
+}
+
+.services::after {
+  content: '';
+  position: absolute; /* Position absolue pour couvrir la section */
+  top: 0; /* Aligne le haut de l'overlay avec le haut de la section */
+  left: 0; /* Aligne le côté gauche de l'overlay avec le côté gauche de la section */
+  right: 0; /* Aligne le côté droit de l'overlay avec le côté droit de la section */
+  bottom: 0; /* Aligne le bas de l'overlay avec le bas de la section */
+  background-color: rgba(231, 87, 86, 0.2); /* Couleur avec 20% d'opacité */
+  z-index: 1; /* Assurez-vous que l'overlay soit en dessous du contenu */
+}
+
+.container {
+  position: relative; /* Pour s'assurer que le contenu se positionne au-dessus de l'overlay */
+  z-index: 2; /* Assurez-vous que le contenu est visible */
+}
+
+
+
+.services h4 {
+  text-align: center; /* Centre le titre */
+  margin-bottom: 2rem; /* Espacement sous le titre */
+  font-family: 'Syne'; /* Police pour le titre */
+  font-size: 3rem;
+  color: #FDEF77;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.service-bubbles {
+  display: flex;
+  flex-wrap: wrap; /* Permet d'enrouler les bulles sur plusieurs lignes */
+  justify-content: space-between; /* Espace entre les bulles */
+  gap: 2px; /* Espace entre les bulles */
+}
+
+
+.bubble {
+  width: 260px; /* Largeur fixe pour les bulles */
+  height: 260px; /* Hauteur égale à la largeur */
+  background-color: #f0f0f0; /* Couleur de fond des bulles */
+  border-radius: 50%; /* Arrondi à 50% pour faire des cercles */
+  display: flex; /* Flexbox pour centrer le contenu */
+  align-items: center; /* Centrer verticalement */
+  justify-content: center; /* Centrer horizontalement */
+  text-align: center; /* Centrer le texte */
+  transition: background-color 0.3s; /* Animation de la couleur de fond lors du survol */
+  cursor: pointer; /* Curseur en forme de main pour indiquer que c'est cliquable */
+  font-size: 1.5rem; /* Taille de la police pour les bulles */
+  margin: 30px; /* Marge pour espacer les bulles */
+}
+
+
+
+.bubble:hover {
+  background-color: #d9d9d9; /* Changement de couleur au survol */
+}
+
+.info-box {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9); /* Fond avec opacité */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* Masqué par défaut */
+  z-index: 10;
+  transition: opacity 0.3s ease; /* Transition d'opacité */
+  opacity: 0; /* Début avec opacité 0 */
+}
+
+.bubble:hover + .info-box {
+  opacity: 1; /* Rendu visible au survol */
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #2c3e50;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.testimonials p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonials span {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #FDEF77, #E75756);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer .socials {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+footer .socials li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer .socials a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
